@@ -170,6 +170,7 @@ div.search{
     margin:0 3px;
     cursor: pointer;
     background-color: rgba(255,255,255,.4);
+    transition: all .3s;
 }
 
 .circle i:hover {
