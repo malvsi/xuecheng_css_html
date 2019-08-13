@@ -66,6 +66,11 @@ div.search {
     border: 2px solid rgb(52, 143, 255);
     border-right: 0;
     text-indent: 10px;
+    transition: box-shadow .3s;
+}
+
+.search input:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
 }
 
 .search button {
@@ -197,12 +202,63 @@ div.search {
     width: 228px;
     height: 330px;
     position: absolute;
-    /* background-color: pink; */
     background-color: rgba(0, 0, 0, .4);
     top: 50%;
     right: 0;
     margin-top: -165px;
-    /* transform: translateY(-50%); */
+    opacity: 0.8;
+}
+/* 课程表 */
+.timebook dt{
+    height: 50px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    background-color: rgb(49, 184, 238);
+}
+
+.timebook dd{
+    background-color: #f3f5f7;
+    height: 280px;
+    padding: 20px 10px;
+}
+
+.timebook ul li{
+    margin: 0 20px 20px 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom:10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.timebook ul li:last-child{
+    color:rgb(49, 184, 238);
+    border-bottom: none;
+}
+
+.timebook li h3{
+    display: inline;
+    font-weight: 400;
+}
+
+.timebook li p {
+    display: block;
+}
+
+.timebook dd li span{
+    display: inline-block;
+}
+
+.timebook a{
+    display: block;
+    font-size: 18px;
+    border: 1px solid rgb(49, 184, 238);
+    color:rgb(49, 184, 238);
+    text-align: center;
+    padding: 10px;
 }
 
 .timebook:hover {
