@@ -1,19 +1,21 @@
-body{
+body {
     background-color: #f3f5f7;
 }
-header{
+
+header {
     width: 1300px;
     height: 100px;
     margin: 0 auto;
     padding-top: 30px;
 }
-.logo{
+
+.logo {
     width: 195px;
     height: 42px;
     float: left;
 }
 
-.logo a{
+.logo a {
     display: block;
     width: 195px;
     height: 42px;
@@ -22,72 +24,78 @@ header{
     text-indent: -999px;
 }
 
-nav{
+nav {
     float: left;
     margin-left: 20px;
 }
 
-nav li{
+nav li {
     float: left;
     height: 40px;
     line-height: 40px;
     margin-left: 25px;
 }
 
-nav li a{
+nav li a {
     display: block;
     height: 40px;
     font-size: 18px;
     padding: 0 10px;
 }
-nav li a:hover{
+
+nav li a:hover {
     border-bottom: 2px solid rgba(57, 78, 243, 0.867);
 }
 
-div.search{
+div.search {
     float: left;
     margin-left: 140px;
     width: 410px;
     height: 40px;
 }
 
-.search *{
+.search * {
     float: left;
     height: 40px;
     outline: none;
     border: none;
 }
 
-.search input{
+.search input {
     width: 360px;
     border: 2px solid rgb(52, 143, 255);
     border-right: 0;
     text-indent: 10px;
 }
 
-.search button{
+.search button {
     width: 50px;
     background: url(../images/fa-search.png) no-repeat;
 }
 
-.personal{
+.personal {
     float: right;
     height: 40px;
     line-height: 40px;
     font-size: 14px;
 }
 
-.personal dt,.personal dd{
+.personal dt,
+.personal dd {
     float: left;
 }
 
-.personal s{
+.personal s {
     position: relative;
     padding: 0 20px;
     text-decoration: none;
 }
 
-.personal s::before{
+.personal s img:hover{
+    transform: scale(1.1);
+}
+
+.personal s::before {
     display: block;
     position: absolute;
     content: "";
@@ -99,33 +107,38 @@ div.search{
     top: 0;
 }
 
-.personal span img{
+.personal span img {
     border-radius: 50%;
     margin-right: 10px;
+    transition: all .4s;
+}
+
+.personal span img:hover {
+    transform: rotate(360deg);
 }
 
 /* 版心 */
-.banner{
+.banner {
     height: 420px;
-    background-color: rgb(21,0,89);
+    background-color: rgb(21, 0, 89);
 }
 
-.inner{
+.inner {
     height: 420px;
     position: relative;
 }
 
-.subnav{
+.subnav {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     height: 100%;
     width: 190px;
     padding-top: 10px;
 }
 
-.subnav ul li{
+.subnav ul li {
     position: relative;
     height: 40px;
     line-height: 40px;
@@ -135,41 +148,42 @@ div.search{
     margin-left: 20px;
 }
 
-.subnav li a{
+.subnav li a {
     color: white;
     display: block;
 }
 
-.subnav li a:hover{
+.subnav li a:hover {
     color: #00b4ff;
 }
 
-.subnav li span{
+.subnav li span {
     position: absolute;
     top: 0;
     right: 20px;
 }
 
 /* 轮播图圆点 */
-.circle{
+.circle {
     position: absolute;
     width: 170px;
     height: 20px;
     bottom: 15px;
     left: 50%;
-    margin-left: -85px;
+    /* margin-left: -85px; */
+    transform: translateX(-50%);
     padding: 0 10px;
 }
 
-.circle i{
+.circle i {
     display: inline-block;
     vertical-align: middle;
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    margin:0 3px;
+    margin: 0 3px;
     cursor: pointer;
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255, 255, 255, .4);
     transition: all .3s;
 }
 
@@ -179,4 +193,19 @@ div.search{
     border-radius: 39%;
 }
 
+.timebook {
+    width: 228px;
+    height: 330px;
+    position: absolute;
+    /* background-color: pink; */
+    background-color: rgba(0, 0, 0, .4);
+    top: 50%;
+    right: 0;
+    margin-top: -165px;
+    /* transform: translateY(-50%); */
+}
 
+.timebook:hover {
+    transform: scale(1.05);
+
+}
