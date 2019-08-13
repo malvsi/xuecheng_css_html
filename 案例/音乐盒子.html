@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="resource/jquery-1.11.1.min.js"></script>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .musict,
+        .musicb {
+            border-radius: 50%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .ro {
+            -webkit-animation: changge 4s linear infinite;
+        }
+
+        @-webkit-keyframes changge {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .musict {
+            transition: all .4s;
+            transform-origin: bottom;
+        }
+
+        .music{
+            transform: rotateX(180deg);
+        }
+    </style>
+    <title>音乐盒子</title>
+</head>
+
+<body>
+    <audio src="resource/music.mp3"></audio>
+    <div class="box">
+        <div class="musicb"><img src="resource/musicb.jpg" alt=""></div>
+        <div class="musict"><img src="resource/musict.jpg" alt=""></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var flag = 0;
+            $('.musict').click(function () {
+                if (flag == 0) {
+                    // 盖子先翻开
+                    $('.musict').addClass('music');
+                    // 盒子里面开始旋转
+                    $('.musicb').addClass('ro');
+
+                    $('audio')[0].load();
+                    $('audio')[0].play();
+                    flag = 1;
+                } else {
+                    flag = 0;
+                    // 盒子里面先停止旋转
+                    $('.musicb').removeClass('ro');
+                    // 盖上盒子
+                    $('.musict').removeClass('music');
+                    $('audio')[0].pause();
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
